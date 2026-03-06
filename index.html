@@ -1,9 +1,386 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset='UTF-8'>
-<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>KISHORE - Information Technology Student | Cloud Enthusiast</title>
+    <meta name="title" content="KISHORE - Information Technology Student">
+    <meta name="description" content="IT Student at SKCET | Learning Cloud Computing & Web Development">
+    <meta name="keywords" content="Kishore, IT Student, Cloud Computing, Python, Portfolio">
+    <meta name="author" content="KISHORE">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kishore.dev">
+    <meta property="og:title" content="KISHORE - Information Technology Student">
+    <meta property="og:description" content="IT Student at SKCET | Learning Cloud Computing & Web Development">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kishore.dev">
+    <meta property="twitter:title" content="KISHORE - Information Technology Student">
+    <meta property="twitter:description" content="IT Student at SKCET | Learning Cloud Computing & Web Development">
+    <meta property="twitter:image" content="/assets/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/darkmode.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "KISHORE",
+        "url": "https://kishore.dev",
+        "sameAs": [
+            "https://instagram.com/kishore_its",
+            "https://linkedin.com/in/kishore-v",
+            "https://github.com/kishore-its"
+        ],
+        "jobTitle": "Information Technology Student",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Sri Krishna College of Engineering and Technology"
+        }
+    }
+    </script>
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Loading Skeleton -->
+    <div id="skeleton-loader" class="skeleton-loader">
+        <div class="skeleton-nav"></div>
+        <div class="skeleton-hero"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="app" style="display: none;">
+        <!-- Navigation Bar -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="/">KISHORE</a>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                        <li><a href="#blog" class="nav-link">Blog</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <a href="/secure-cloud.html" class="btn btn-outline btn-sm" target="_blank">
+                            <i class="fas fa-cloud"></i> Cloud
+                        </a>
+                        <button class="hamburger" id="hamburger" aria-label="Menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="floating-element floating-1">
+                <i class="fas fa-cloud"></i>
+            </div>
+            <div class="floating-element floating-2">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="floating-element floating-3">
+                <i class="fas fa-robot"></i>
+            </div>
+            
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <span class="hero-badge">Information Technology Student</span>
+                        <h1>Hi, I'm <span class="highlight">KISHORE</span></h1>
+                        <div class="typed-container">
+                            <span class="typed-text"></span>
+                            <span class="cursor">&nbsp;</span>
+                        </div>
+                        <p class="hero-bio">IT Student at SKCET | Learning Cloud Computing & Web Development | Batch 2025-2028</p>
+                        
+                        <!-- Stats Grid -->
+                        <div class="stats-grid" id="statsGrid"></div>
+                        
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary">View Projects</a>
+                            <a href="#contact" class="btn btn-outline">Contact Me</a>
+                            <a href="/assets/resume-kishore.pdf" class="btn btn-secondary" download>
+                                <i class="fas fa-download"></i> Resume
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        <div class="profile-frame">
+                            <img src="/assets/images/profile.jpg" alt="KISHORE" id="profileImage">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links-hero" id="socialLinksHero"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title reveal">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-card reveal">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Who I Am</h3>
+                        <p>I'm a first-year Information Technology student at Sri Krishna College of Engineering and Technology (2025-2028 batch). Passionate about cloud computing and web development.</p>
+                    </div>
+                    <div class="about-card reveal">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Education</h3>
+                        <div id="educationList"></div>
+                    </div>
+                    <div class="about-card reveal">
+                        <i class="fas fa-clock"></i>
+                        <h3>Current Focus</h3>
+                        <ul class="focus-list">
+                            <li><i class="fas fa-check-circle"></i> Learning AWS Cloud</li>
+                            <li><i class="fas fa-spinner fa-pulse"></i> Building portfolio projects</li>
+                            <li><i class="fas fa-book"></i> Python programming</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title reveal">My Skills</h2>
+                
+                <div class="skills-filter reveal">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="Programming">Programming</button>
+                    <button class="filter-btn" data-category="Cloud">Cloud</button>
+                    <button class="filter-btn" data-category="Tools">Tools</button>
+                </div>
+                
+                <div class="skills-grid" id="skillsGrid"></div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title reveal">My Projects</h2>
+                <div class="projects-grid" id="projectsGrid"></div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications">
+            <div class="container">
+                <h2 class="section-title reveal">Certifications</h2>
+                <div class="cert-grid" id="certGrid"></div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog">
+            <div class="container">
+                <h2 class="section-title reveal">Latest Blog Posts</h2>
+                <div class="blog-grid" id="blogGrid"></div>
+                <div class="view-all">
+                    <a href="/blog.html" class="btn btn-outline">Read All Posts</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title reveal">Get In Touch</h2>
+                <div class="contact-container">
+                    <div class="contact-info reveal">
+                        <h3>Let's Connect</h3>
+                        <p>I'm always interested in learning and collaborating. Feel free to reach out!</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Coimbatore, Tamil Nadu</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>kishore.it@skcet.edu.in</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+91 93632 65552</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Batch 2025 - 2028</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-links" id="contactLinks"></div>
+                        
+                        <!-- Visitor Counter -->
+                        <div class="visitor-counter">
+                            <i class="fas fa-eye"></i>
+                            <span>Visitors: </span>
+                            <span id="visitorCount">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form reveal">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <h3>KISHORE</h3>
+                        <p>Information Technology Student</p>
+                        <p>SKCET | 2025 - 2028</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-social" id="footerSocial"></div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 KISHORE. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" class="back-to-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- AI Chatbot -->
+    <div id="chatbotContainer" class="chatbot-container">
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h4>AI Assistant <span class="chatbot-status">online</span></h4>
+                <button class="chatbot-close" id="chatbotCloseBtn">&times;</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages"></div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbotInput" placeholder="Ask me anything..." autocomplete="off">
+                <button id="chatbotSendBtn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <button class="chatbot-toggle" id="chatbotToggleBtn">
+            <i class="fas fa-robot"></i>
+        </button>
+    </div>
+
+    <!-- Modals -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <div id="certModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="certModalBody"></div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-storage-compat.js"></script>
+    
+    <!-- CryptoJS for AES-256 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+    <!-- Config and App Scripts -->
+    <script src="/js/config.js"></script>
+    <script src="/firebase-config.js"></script>
+    <script src="/js/encryption.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/cloud.js"></script>
+    <script src="/js/ui.js"></script>
+    <script src="/js/blog.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="/js/chatbot.js"></script>
+    <script src="/js/app.js"></script>
+    
+    <!-- Register Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => console.log('ServiceWorker registered'))
+                    .catch(error => console.log('ServiceWorker registration failed'));
+            });
+        }
+    </script>
 </body>
 </html>
