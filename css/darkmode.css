@@ -1,52 +1,38 @@
-/* Dark Mode Specific Styles */
+/* Dark Mode Theme Overrides */
 [data-theme="dark"] {
     /* Background Colors */
-    --bg-primary: #0a0c14;
-    --bg-secondary: #111827;
-    --bg-tertiary: #1f2937;
-    --bg-card: rgba(17, 24, 39, 0.95);
-    --bg-glass: rgba(10, 12, 20, 0.4);
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --bg-card: rgba(30, 41, 59, 0.95);
+    --bg-glass: rgba(15, 23, 42, 0.4);
     
     /* Text Colors */
-    --text-primary: #f9fafb;
-    --text-secondary: #e5e7eb;
-    --text-tertiary: #9ca3af;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
     
-    /* UI Elements */
-    --border-color: #374151;
+    /* Borders */
+    --border-color: #334155;
     --border-light: rgba(255, 255, 255, 0.05);
+    
+    /* Glass Effect */
+    --glass-bg: rgba(15, 23, 42, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.05);
     
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.5);
-    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.6);
-    --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.6);
-    --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.7);
-    --shadow-xl: 0 25px 50px -12px rgb(0 0 0 / 0.7);
-    --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.3);
-    
-    /* Glass Effect */
-    --glass-bg: rgba(10, 12, 20, 0.3);
-    --glass-border: rgba(255, 255, 255, 0.03);
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5);
+    --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+    --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.5);
+    --shadow-xl: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+    --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.2);
 }
 
-/* Dark mode specific component overrides */
-[data-theme="dark"] .navbar {
-    background: var(--bg-glass);
-    border-bottom: 1px solid var(--glass-border);
-}
-
+/* Dark mode specific overrides */
 [data-theme="dark"] .navbar.scrolled {
     background: var(--bg-card);
-    border-bottom: 1px solid var(--border-color);
-}
-
-[data-theme="dark"] .nav-link {
-    color: var(--text-secondary);
-}
-
-[data-theme="dark"] .nav-link:hover,
-[data-theme="dark"] .nav-link.active {
-    color: var(--primary-light);
+    backdrop-filter: blur(10px);
 }
 
 [data-theme="dark"] .btn-outline {
@@ -63,11 +49,11 @@
 [data-theme="dark"] .project-card,
 [data-theme="dark"] .cert-card,
 [data-theme="dark"] .blog-card,
+[data-theme="dark"] .about-card,
 [data-theme="dark"] .contact-info,
 [data-theme="dark"] .contact-form {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-    backdrop-filter: blur(10px);
 }
 
 [data-theme="dark"] .filter-btn {
@@ -91,51 +77,16 @@
 [data-theme="dark"] .form-group input:focus,
 [data-theme="dark"] .form-group textarea:focus {
     border-color: var(--primary-light);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
 }
 
 [data-theme="dark"] .footer {
-    background: var(--bg-secondary);
+    background: #0a0f1a;
     border-top: 1px solid var(--border-color);
 }
 
 [data-theme="dark"] .modal-content {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-}
-
-[data-theme="dark"] .social-icon {
-    background: var(--bg-glass);
-    border: 1px solid var(--glass-border);
-    color: var(--text-secondary);
-}
-
-[data-theme="dark"] .social-icon:hover {
-    background: var(--primary);
-    color: white;
-}
-
-[data-theme="dark"] .tech-tag,
-[data-theme="dark"] .skill-tag {
-    background: var(--bg-tertiary);
-    color: var(--text-tertiary);
-}
-
-[data-theme="dark"] .stat-item {
-    background: var(--bg-glass);
-    border: 1px solid var(--glass-border);
-}
-
-[data-theme="dark"] .stat-item:hover {
-    background: var(--bg-card);
-}
-
-[data-theme="dark"] .cursor {
-    border-color: var(--primary-light);
-}
-
-[data-theme="dark"] .cursor-follower {
-    background: rgba(99, 102, 241, 0.15);
 }
 
 [data-theme="dark"] .skeleton-loader {
@@ -148,18 +99,93 @@
     background-size: 200% 100%;
 }
 
-[data-theme="dark"] .theme-toggle {
+[data-theme="dark"] .tech-tag {
     background: var(--bg-tertiary);
-    color: var(--text-primary);
+    color: var(--text-secondary);
 }
 
-[data-theme="dark"] .theme-toggle:hover {
+[data-theme="dark"] .social-icon {
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+}
+
+[data-theme="dark"] .social-icon:hover {
+    background: var(--primary);
+}
+
+[data-theme="dark"] .cursor-follower {
+    background: rgba(99, 102, 241, 0.15);
+}
+
+[data-theme="dark"] .floating-element {
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    color: var(--primary-light);
+}
+
+[data-theme="dark"] .stat-item {
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+}
+
+[data-theme="dark"] .stat-item:hover {
+    background: var(--bg-card);
+}
+
+[data-theme="dark"] .progress-bar {
+    background: var(--bg-tertiary);
+}
+
+[data-theme="dark"] .progress-fill {
+    background: var(--gradient-primary);
+}
+
+[data-theme="dark"] .visitor-counter {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .contact-link {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .contact-link:hover {
     background: var(--primary);
     color: white;
 }
 
-[data-theme="dark"] .floating-element {
-    background: var(--bg-glass);
-    border: 1px solid var(--glass-border);
-    color: var(--primary-light);
+[data-theme="dark"] .cert-progress-badge {
+    background: var(--primary-dark);
+}
+
+[data-theme="dark"] .skill-tag {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* Dark mode toggle icon animation */
+[data-theme="dark"] .theme-toggle i {
+    transform: rotate(180deg);
+}
+
+/* Dark mode specific gradient adjustments */
+[data-theme="dark"] .hero::before {
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .hero::after {
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.05) 0%, transparent 70%);
 }
