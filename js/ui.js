@@ -256,4 +256,9 @@ style.textContent = `
     }
     
     @keyframes spin {
-        to { transform: rotate(360
+        to { transform: rotate(360deg); }
+    }
+`;
+document.head.appendChild(style);
+
+window.UI = UI;
