@@ -1,1 +1,24 @@
-
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Gradient -->
+    <rect width="500" height="500" fill="url(#gradient)" />
+    
+    <!-- Profile Silhouette -->
+    <circle cx="250" cy="180" r="80" fill="white" opacity="0.2" />
+    <circle cx="250" cy="400" r="120" fill="white" opacity="0.2" />
+    
+    <!-- Decorative Elements -->
+    <circle cx="150" cy="150" r="20" fill="white" opacity="0.1" />
+    <circle cx="350" cy="350" r="30" fill="white" opacity="0.1" />
+    <circle cx="400" cy="100" r="15" fill="white" opacity="0.1" />
+    
+    <!-- Initial K -->
+    <text x="250" y="280" text-anchor="middle" fill="white" font-size="80" font-family="Arial" font-weight="bold" opacity="0.5">K</text>
+    
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366f1" />
+            <stop offset="50%" stop-color="#8b5cf6" />
+            <stop offset="100%" stop-color="#ec4899" />
+        </linearGradient>
+    </defs>
+</svg>
