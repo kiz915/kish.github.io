@@ -1,10 +1,18 @@
-/* Dark Mode Specific Styles */
-[data-theme="dark"] {
-    /* Dark theme variables are already in main.css */
+/* Dark mode is now controlled by [data-theme="dark"] in main.css */
+/* This file contains additional dark mode specific styles if needed */
+
+[data-theme="dark"] .navbar {
+    border-bottom-color: var(--border-color);
 }
 
-[data-theme="dark"] .navbar.scrolled {
-    background: rgba(15, 23, 42, 0.8);
+[data-theme="dark"] .stat-item,
+[data-theme="dark"] .skill-card,
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .cert-card,
+[data-theme="dark"] .about-card,
+[data-theme="dark"] .contact-info,
+[data-theme="dark"] .contact-form {
+    border-color: var(--border-color);
 }
 
 [data-theme="dark"] .btn-outline {
@@ -15,57 +23,9 @@
 [data-theme="dark"] .btn-outline:hover {
     background: var(--gradient-primary);
     color: white;
-    border-color: transparent;
-}
-
-[data-theme="dark"] .skill-card,
-[data-theme="dark"] .project-card,
-[data-theme="dark"] .cert-card,
-[data-theme="dark"] .blog-card,
-[data-theme="dark"] .contact-info,
-[data-theme="dark"] .contact-form {
-    background: rgba(30, 41, 59, 0.6);
-}
-
-[data-theme="dark"] .filter-btn {
-    border-color: var(--primary-light);
-    color: var(--primary-light);
-}
-
-[data-theme="dark"] .filter-btn:hover,
-[data-theme="dark"] .filter-btn.active {
-    background: var(--gradient-primary);
-    color: white;
-}
-
-[data-theme="dark"] .form-group input,
-[data-theme="dark"] .form-group textarea {
-    background: var(--bg-tertiary);
-    border-color: var(--border-color);
-    color: var(--text-primary);
 }
 
 [data-theme="dark"] .footer {
     background: #020617;
-}
-
-[data-theme="dark"] .modal-content {
-    background: var(--bg-tertiary);
-}
-
-[data-theme="dark"] .close:hover {
-    background: var(--error-light);
-}
-
-[data-theme="dark"] .skeleton-loader {
-    background: var(--bg-primary);
-}
-
-[data-theme="dark"] .skeleton-nav,
-[data-theme="dark"] .skeleton-hero {
-    background: linear-gradient(90deg, 
-        var(--bg-tertiary) 25%, 
-        var(--bg-secondary) 50%, 
-        var(--bg-tertiary) 75%
-    );
+    border-top-color: #1e293b;
 }
