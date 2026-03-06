@@ -1,31 +1,55 @@
-/* Dark mode is now controlled by [data-theme="dark"] in main.css */
-/* This file contains additional dark mode specific styles if needed */
-
-[data-theme="dark"] .navbar {
-    border-bottom-color: var(--border-color);
+/* Dark Mode Toggle - This file handles theme switching */
+[data-theme="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f1f5f9;
+    --bg-tertiary: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-tertiary: #475569;
+    --border-color: #e2e8f0;
 }
 
-[data-theme="dark"] .stat-item,
-[data-theme="dark"] .skill-card,
-[data-theme="dark"] .project-card,
-[data-theme="dark"] .cert-card,
-[data-theme="dark"] .about-card,
-[data-theme="dark"] .contact-info,
-[data-theme="dark"] .contact-form {
-    border-color: var(--border-color);
+[data-theme="light"] .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.9);
 }
 
-[data-theme="dark"] .btn-outline {
-    border-color: var(--primary-light);
-    color: var(--primary-light);
+[data-theme="light"] .btn-outline {
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
-[data-theme="dark"] .btn-outline:hover {
+[data-theme="light"] .btn-outline:hover {
     background: var(--gradient-primary);
     color: white;
 }
 
-[data-theme="dark"] .footer {
-    background: #020617;
-    border-top-color: #1e293b;
+[data-theme="light"] .skill-card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .cert-card,
+[data-theme="light"] .blog-card,
+[data-theme="light"] .contact-info,
+[data-theme="light"] .contact-form {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e2e8f0;
+}
+
+[data-theme="light"] .form-group input,
+[data-theme="light"] .form-group textarea {
+    background: white;
+    border-color: #e2e8f0;
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .footer {
+    background: #f1f5f9;
+}
+
+[data-theme="light"] .social-icon {
+    background: white;
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .social-icon:hover {
+    background: var(--gradient-primary);
+    color: white;
 }
