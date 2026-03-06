@@ -72,20 +72,16 @@ const APP_CONFIG = {
     skills: {
         programming: [
             { name: "Python", level: 65, category: "Programming", icon: "fab fa-python" },
-            { name: "JavaScript", level: 50, category: "Programming", icon: "fab fa-js" },
             { name: "HTML5/CSS3", level: 70, category: "Programming", icon: "fab fa-html5" },
             { name: "C++ Basics", level: 45, category: "Programming", icon: "fas fa-code" }
         ],
         cloud: [
             { name: "AWS", level: 40, category: "Cloud", icon: "fab fa-aws" },
-            { name: "Firebase", level: 35, category: "Cloud", icon: "fas fa-fire" },
             { name: "Cloud Concepts", level: 50, category: "Cloud", icon: "fas fa-cloud" }
         ],
         tools: [
             { name: "Git/GitHub", level: 55, category: "Tools", icon: "fab fa-git-alt" },
-            { name: "VS Code", level: 75, category: "Tools", icon: "fas fa-code" },
-            { name: "Figma Basics", level: 30, category: "Tools", icon: "fab fa-figma" },
-            { name: "Linux Basics", level: 25, category: "Tools", icon: "fab fa-linux" }
+            { name: "VS Code", level: 75, category: "Tools", icon: "fas fa-code" }
         ],
         creative: [
             { name: "AMV Creation", level: 60, category: "Creative", icon: "fas fa-film" },
