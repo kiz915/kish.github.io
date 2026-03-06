@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found | KISHORE</title>
+    <base href="/kish.github.io/">
+    <title>404 - Page Not Found | KISHORE (25IT161)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/kish.github.io/css/main.css">
     <style>
         .error-page {
             min-height: 100vh;
@@ -17,7 +18,6 @@
             position: relative;
             overflow: hidden;
         }
-        
         .error-page::before {
             content: '404';
             position: absolute;
@@ -30,50 +30,45 @@
             opacity: 0.05;
             z-index: 1;
         }
-        
         .error-content {
             position: relative;
             z-index: 2;
             max-width: 600px;
             padding: var(--spacing-xl);
         }
-        
         .error-code {
             font-size: 8rem;
             font-weight: 800;
-            background: var(--gradient-primary);
+            background: linear-gradient(135deg, #6366f1, #ec4899);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             line-height: 1;
             margin-bottom: var(--spacing-md);
         }
-        
         .error-title {
             font-size: 2rem;
             margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
         }
-        
         .error-message {
             color: var(--text-secondary);
             margin-bottom: var(--spacing-xl);
         }
-        
         .home-btn {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
             padding: 1rem 2rem;
-            background: var(--gradient-primary);
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
             color: white;
-            border-radius: var(--border-radius-full);
+            border-radius: 9999px;
             text-decoration: none;
             font-weight: 600;
-            transition: all var(--transition);
+            transition: all 0.3s ease;
         }
-        
         .home-btn:hover {
             transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.5);
         }
     </style>
 </head>
@@ -83,7 +78,7 @@
             <div class="error-code">404</div>
             <h1 class="error-title">Page Not Found</h1>
             <p class="error-message">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
-            <a href="/" class="home-btn">
+            <a href="/kish.github.io/" class="home-btn">
                 <i class="fas fa-home"></i>
                 Back to Home
             </a>
