@@ -1,1 +1,43 @@
-
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Dark Background -->
+    <rect width="1920" height="1080" fill="#0f172a" />
+    
+    <!-- Gradient Orbs -->
+    <circle cx="500" cy="300" r="300" fill="url(#gradient1)" opacity="0.3" />
+    <circle cx="1400" cy="700" r="400" fill="url(#gradient2)" opacity="0.3" />
+    <circle cx="200" cy="800" r="250" fill="url(#gradient3)" opacity="0.2" />
+    <circle cx="1600" cy="200" r="350" fill="url(#gradient1)" opacity="0.2" />
+    
+    <!-- Grid Pattern -->
+    <pattern id="grid" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+        <path d="M 50 0 L 0 0 0 50" fill="none" stroke="white" stroke-width="0.5" opacity="0.05" />
+    </pattern>
+    <rect width="1920" height="1080" fill="url(#grid)" />
+    
+    <!-- Floating Particles -->
+    <circle cx="300" cy="200" r="3" fill="white" opacity="0.3" />
+    <circle cx="800" cy="400" r="4" fill="white" opacity="0.3" />
+    <circle cx="1200" cy="600" r="2" fill="white" opacity="0.3" />
+    <circle cx="1600" cy="300" r="3" fill="white" opacity="0.3" />
+    <circle cx="400" cy="700" r="4" fill="white" opacity="0.3" />
+    <circle cx="700" cy="900" r="3" fill="white" opacity="0.3" />
+    <circle cx="1100" cy="800" r="2" fill="white" opacity="0.3" />
+    <circle cx="1500" cy="500" r="4" fill="white" opacity="0.3" />
+    <circle cx="1700" cy="900" r="3" fill="white" opacity="0.3" />
+    <circle cx="200" cy="400" r="2" fill="white" opacity="0.3" />
+    
+    <defs>
+        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366f1" />
+            <stop offset="100%" stop-color="#8b5cf6" />
+        </linearGradient>
+        <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#8b5cf6" />
+            <stop offset="100%" stop-color="#ec4899" />
+        </linearGradient>
+        <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ec4899" />
+            <stop offset="100%" stop-color="#6366f1" />
+        </linearGradient>
+    </defs>
+</svg>
