@@ -1,133 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/kish.github.io/">
-    <title>Secure Cloud - KISHORE (25IT161)</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/kish.github.io/css/main.css">
-    <link rel="stylesheet" href="/kish.github.io/css/darkmode.css">
-    <link rel="stylesheet" href="/kish.github.io/css/cloud.css">
-    <meta name="robots" content="noindex, nofollow">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Secure Cloud - KISHORE (25IT161)</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/darkmode.css">
+<link rel="stylesheet" href="css/cloud.css">
+
+<meta name="robots" content="noindex, nofollow">
+
 </head>
+
 <body>
-    <div id="cloud-app">
-        <!-- Authentication Section -->
-        <section id="authSection" class="auth-section">
-            <div class="auth-card">
-                <div class="auth-header">
-                    <h2>Secure Cloud Storage</h2>
-                    <p>AES-256 Encrypted</p>
-                </div>
-                
-                <div class="auth-tabs">
-                    <button class="auth-tab active" data-tab="login">Login</button>
-                    <button class="auth-tab" data-tab="register">Register</button>
-                </div>
-                
-                <!-- Login Form -->
-                <form id="loginForm" class="auth-form active">
-                    <div class="form-group">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" id="loginEmail" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" id="loginPassword" placeholder="Password" required>
-                    </div>
-                    <button type="submit" class="auth-btn">Login</button>
-                    <div id="loginError" class="auth-error"></div>
-                </form>
-                
-                <!-- Register Form -->
-                <form id="registerForm" class="auth-form">
-                    <div class="form-group">
-                        <i class="fas fa-user"></i>
-                        <input type="text" id="registerName" placeholder="Full Name" required>
-                    </div>
-                    <div class="form-group">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" id="registerEmail" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" id="registerPassword" placeholder="Password" required>
-                    </div>
-                    <div class="form-group">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" id="registerConfirmPassword" placeholder="Confirm Password" required>
-                    </div>
-                    <button type="submit" class="auth-btn">Register</button>
-                    <div id="registerError" class="auth-error"></div>
-                </form>
-            </div>
-        </section>
 
-        <!-- Dashboard Section -->
-        <section id="dashboardSection" style="display: none;">
-            <div class="cloud-container">
-                <div class="dashboard-header">
-                    <div class="user-info">
-                        <div class="user-avatar">
-                            <i class="fas fa-user-circle"></i>
-                        </div>
-                        <div>
-                            <h2 id="userDisplayName"></h2>
-                            <span id="userRoleBadge" class="user-role">Viewer</span>
-                        </div>
-                    </div>
-                    <div>
-                        <button id="logoutBtn" class="logout-btn">
-                            <i class="fas fa-sign-out-alt"></i> Logout
-                        </button>
-                    </div>
-                </div>
+<div id="cloud-app">
 
-                <!-- File Manager -->
-                <div class="file-manager">
-                    <div class="file-manager-header">
-                        <h3><i class="fas fa-cloud-upload-alt"></i> Encrypted File Storage</h3>
-                        <div class="encryption-badge">
-                            <i class="fas fa-lock"></i> AES-256 Encryption
-                        </div>
-                    </div>
-                    
-                    <!-- Upload Area (Admin only) -->
-                    <div id="uploadArea" class="file-upload-area" style="display: none;">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                        <p>Drag & drop files here or click to browse</p>
-                        <small>Max file size: 10MB • Files are encrypted before upload</small>
-                        <input type="file" id="fileInput" style="display: none;" multiple>
-                    </div>
+<!-- Authentication Section -->
+<section id="authSection" class="auth-section">
 
-                    <!-- File List -->
-                    <div class="file-list-header">
-                        <h4><i class="fas fa-files"></i> Your Files</h4>
-                    </div>
-                    <div id="fileList" class="file-list">
-                        <div class="file-item placeholder">
-                            <i class="fas fa-spinner fa-spin"></i>
-                            <span>Loading files...</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+<div class="auth-card">
 
-    <!-- Scripts -->
-    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-storage-compat.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    
-    <script src="/kish.github.io/js/config.js"></script>
-    <script src="/kish.github.io/firebase-config.js"></script>
-    <script src="/kish.github.io/js/encryption.js"></script>
-    <script src="/kish.github.io/js/auth.js"></script>
-    <script src="/kish.github.io/js/cloud.js"></script>
-    <script src="/kish.github.io/js/ui.js"></script>
+<div class="auth-header">
+<h2>Secure Cloud Storage</h2>
+<p>AES-256 Encrypted</p>
+</div>
+
+<div class="auth-tabs">
+<button class="auth-tab active" data-tab="login">Login</button>
+<button class="auth-tab" data-tab="register">Register</button>
+</div>
+
+<!-- Login -->
+<form id="loginForm" class="auth-form active">
+
+<div class="form-group">
+<i class="fas fa-envelope"></i>
+<input type="email" id="loginEmail" placeholder="Email" required>
+</div>
+
+<div class="form-group">
+<i class="fas fa-lock"></i>
+<input type="password" id="loginPassword" placeholder="Password" required>
+</div>
+
+<button type="submit" class="auth-btn">Login</button>
+
+<div id="loginError" class="auth-error"></div>
+
+</form>
+
+<!-- Register -->
+<form id="registerForm" class="auth-form">
+
+<div class="form-group">
+<i class="fas fa-user"></i>
+<input type="text" id="registerName" placeholder="Full Name" required>
+</div>
+
+<div class="form-group">
+<i class="fas fa-envelope"></i>
+<input type="email" id="registerEmail" placeholder="Email" required>
+</div>
+
+<div class="form-group">
+<i class="fas fa-lock"></i>
+<input type="password" id="registerPassword" placeholder="Password" required>
+</div>
+
+<div class="form-group">
+<i class="fas fa-lock"></i>
+<input type="password" id="registerConfirmPassword" placeholder="Confirm Password" required>
+</div>
+
+<button type="submit" class="auth-btn">Register</button>
+
+<div id="registerError" class="auth-error"></div>
+
+</form>
+
+</div>
+</section>
+
+
+<!-- Dashboard -->
+<section id="dashboardSection" style="display:none;">
+
+<div class="cloud-container">
+
+<div class="dashboard-header">
+
+<div class="user-info">
+
+<div class="user-avatar">
+<i class="fas fa-user-circle"></i>
+</div>
+
+<div>
+<h2 id="userDisplayName"></h2>
+<span id="userRoleBadge" class="user-role">Viewer</span>
+</div>
+
+</div>
+
+<button id="logoutBtn" class="logout-btn">
+<i class="fas fa-sign-out-alt"></i> Logout
+</button>
+
+</div>
+
+
+<!-- File Manager -->
+
+<div class="file-manager">
+
+<div class="file-manager-header">
+<h3><i class="fas fa-cloud-upload-alt"></i> Encrypted File Storage</h3>
+<div class="encryption-badge">
+<i class="fas fa-lock"></i> AES-256 Encryption
+</div>
+</div>
+
+
+<!-- Upload -->
+
+<div id="uploadArea" class="file-upload-area" style="display:none;">
+
+<i class="fas fa-cloud-upload-alt"></i>
+<p>Drag & drop files here or click to browse</p>
+<small>Max file size: 10MB • Files are encrypted before upload</small>
+
+<input type="file" id="fileInput" style="display:none;" multiple>
+
+</div>
+
+
+<!-- Files -->
+
+<div class="file-list-header">
+<h4><i class="fas fa-files"></i> Your Files</h4>
+</div>
+
+<div id="fileList" class="file-list">
+
+<div class="file-item placeholder">
+<i class="fas fa-spinner fa-spin"></i>
+<span>Loading files...</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+
+<!-- Scripts -->
+
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-storage-compat.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+<script src="js/config.js"></script>
+<script src="firebase-config.js"></script>
+<script src="js/encryption.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/cloud.js"></script>
+<script src="js/ui.js"></script>
+
 </body>
 </html>
