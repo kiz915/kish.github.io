@@ -1,134 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Blog - KISHORE (25IT161)</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/darkmode.css">
-<link rel="stylesheet" href="css/animations.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/kish.github.io/">
+    <title>Blog - KISHORE (25IT161)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/kish.github.io/css/main.css">
+    <link rel="stylesheet" href="/kish.github.io/css/darkmode.css">
+    <link rel="stylesheet" href="/kish.github.io/css/animations.css">
 </head>
-
 <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/kish.github.io/">KISHORE</a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="/kish.github.io/#home" class="nav-link">Home</a></li>
+                    <li><a href="/kish.github.io/#about" class="nav-link">About</a></li>
+                    <li><a href="/kish.github.io/#skills" class="nav-link">Skills</a></li>
+                    <li><a href="/kish.github.io/#projects" class="nav-link">Projects</a></li>
+                    <li><a href="/kish.github.io/#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="/kish.github.io/blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="/kish.github.io/#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="themeToggle" class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="/kish.github.io/secure-cloud.html" class="btn btn-outline btn-sm">
+                        <i class="fas fa-cloud"></i> Cloud
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<!-- Navigation -->
-<nav class="navbar" id="navbar">
-<div class="nav-container">
+    <!-- Blog Header -->
+    <section class="blog-header">
+        <div class="container">
+            <h1 class="section-title">My Blog</h1>
+            <p class="text-center">Sharing my learning journey in tech - KISHORE (25IT161)</p>
+        </div>
+    </section>
 
-<div class="logo">
-<a href="index.html">KISHORE</a>
-</div>
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+        <div class="container">
+            <div class="skills-filter" id="blogCategoryFilter">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="Cloud Computing">Cloud</button>
+                <button class="filter-btn" data-category="Programming">Programming</button>
+                <button class="filter-btn" data-category="Web Development">Web Dev</button>
+            </div>
+        </div>
+    </section>
 
-<div class="nav-menu" id="navMenu">
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="blog-grid" id="blogPostsGrid">
+                <!-- Posts will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
 
-<ul class="nav-links">
-<li><a href="index.html#home" class="nav-link">Home</a></li>
-<li><a href="index.html#about" class="nav-link">About</a></li>
-<li><a href="index.html#skills" class="nav-link">Skills</a></li>
-<li><a href="index.html#projects" class="nav-link">Projects</a></li>
-<li><a href="index.html#certifications" class="nav-link">Certifications</a></li>
-<li><a href="blog.html" class="nav-link active">Blog</a></li>
-<li><a href="index.html#contact" class="nav-link">Contact</a></li>
-</ul>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>KISHORE</h3>
+                    <p>Information Technology Student | 25IT161</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="/kish.github.io/">Home</a></li>
+                        <li><a href="/kish.github.io/#about">About</a></li>
+                        <li><a href="/kish.github.io/#projects">Projects</a></li>
+                        <li><a href="/kish.github.io/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social" id="footerSocial"></div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KISHORE (25IT161). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-<div class="nav-actions">
-<button id="themeToggle" class="theme-toggle">
-<i class="fas fa-moon"></i>
-</button>
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
 
-<a href="secure-cloud.html" class="btn btn-outline btn-sm">
-<i class="fas fa-cloud"></i> Cloud
-</a>
-
-</div>
-</div>
-</div>
-</nav>
-
-<!-- Blog Header -->
-<section class="blog-header">
-<div class="container">
-<h1 class="section-title">My Blog</h1>
-<p class="text-center">Sharing my learning journey in tech - KISHORE (25IT161)</p>
-</div>
-</section>
-
-<!-- Blog Categories -->
-<section class="blog-categories">
-<div class="container">
-
-<div class="skills-filter" id="blogCategoryFilter">
-
-<button class="filter-btn active" data-category="all">All</button>
-<button class="filter-btn" data-category="Cloud Computing">Cloud</button>
-<button class="filter-btn" data-category="Programming">Programming</button>
-<button class="filter-btn" data-category="Web Development">Web Dev</button>
-
-</div>
-
-</div>
-</section>
-
-<!-- Blog Posts -->
-<section class="blog-posts">
-<div class="container">
-<div class="blog-grid" id="blogPostsGrid"></div>
-</div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-
-<div class="container">
-
-<div class="footer-content">
-
-<div class="footer-info">
-<h3>KISHORE</h3>
-<p>Information Technology Student | 25IT161</p>
-</div>
-
-<div class="footer-links">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="index.html#about">About</a></li>
-<li><a href="index.html#projects">Projects</a></li>
-<li><a href="blog.html">Blog</a></li>
-</ul>
-</div>
-
-<div class="footer-social" id="footerSocial"></div>
-
-</div>
-
-<div class="footer-bottom">
-<p>&copy; 2025 KISHORE (25IT161). All rights reserved.</p>
-</div>
-
-</div>
-
-</footer>
-
-<!-- Back to Top -->
-<button id="backToTop" class="back-to-top">
-<i class="fas fa-arrow-up"></i>
-</button>
-
-<!-- Scripts -->
-
-<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
-
-<script src="js/config.js"></script>
-<script src="firebase-config.js"></script>
-<script src="js/ui.js"></script>
-<script src="js/blog.js"></script>
-<script src="js/analytics.js"></script>
-
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+    <script src="/kish.github.io/js/config.js"></script>
+    <script src="/kish.github.io/firebase-config.js"></script>
+    <script src="/kish.github.io/js/ui.js"></script>
+    <script src="/kish.github.io/js/blog.js"></script>
+    <script src="/kish.github.io/js/analytics.js"></script>
 </body>
 </html>
