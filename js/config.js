@@ -156,13 +156,13 @@ const APP_CONFIG = {
         {
             degree: "B.Tech in Information Technology",
             institution: "Sri Krishna College of Engineering and Technology",
-            period: "2025 - 2028",
+            period: "2025 - 2029",
             rollNo: "25IT161",
             description: "First-year student with Roll No: 25IT161 focusing on cloud computing and web development."
         },
         {
             degree: "Higher Secondary Education",
-            institution: "Kendriya Vidyalaya",
+            institution: "Vailankanni Martic Higher Secondary School - Bagur",
             period: "2023 - 2025",
             description: "Computer Science stream."
         }
@@ -217,7 +217,7 @@ const APP_CONFIG = {
     },
     
     seo: {
-        title: "KISHORE (25IT161) - Information Technology Student",
+        title: "KISHORE - Information Technology Student",
         description: "First-year IT student at SKCET with Roll No: 25IT161, passionate about cloud computing and web development.",
         keywords: "KISHORE, 25IT161, IT Student, Cloud Computing, AWS, Python, SKCET",
         author: "KISHORE (25IT161)",
