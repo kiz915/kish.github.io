@@ -2,28 +2,24 @@
   "name": "KISHORE (25IT161) - IT Student Portfolio",
   "short_name": "KISHORE",
   "description": "Portfolio of KISHORE, Information Technology Student at SKCET, Roll No: 25IT161",
-
-  "start_url": "./",
+  "start_url": "/kish.github.io/",
   "display": "standalone",
-
   "background_color": "#0f172a",
   "theme_color": "#6366f1",
-
   "icons": [
     {
-      "src": "assets/icons/android-chrome-192x192.png",
+      "src": "/kish.github.io/assets/icons/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "assets/icons/android-chrome-512x512.png",
+      "src": "/kish.github.io/assets/icons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
-
   "categories": ["portfolio", "education"],
   "lang": "en",
   "dir": "ltr"
